@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew Infine</title>
+  
+  <link rel="icon" href="../assets/icon.png" sizes="256x256">
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!--Favicons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  
+  <!--Uso de una hoja de estilos para estilos generales y otra para estilos específicos de la página actual-->
+  <link rel="stylesheet" type="text/css" href="../css/estilos-generales.css">
+  <link rel="stylesheet" type="text/css" href="../css/contacto.css">
+
+  <script src="../js/mapa.js"></script>
+</head>
+
+<body onload="initHeaderMenu()">
+  <header>
+    <div id="header-container">
+      <img class="logo" src="../assets/design/logo2.png" alt="'Brew Infine' logotipo con texto" width="666" height="374">
+      <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+      <nav class="nav" id="nav">
+          <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
+          <ul class="nav-list">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="./galeria.html">GALERIA</a></li>
+            <li><a href="./presupuesto.html">PRESUPUESTO</a></li>
+            <li><a id="nav-actual" href="./contacto.html">CONTACTO</a></li>
+          </ul>
+        <div class="hamburger" id="hamburger"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div>
+      <div id="map"></div>
+      <h4>¡Conoce la distancia desde nuestra sede hasta tu lugar de entrega!</h4>
+      <input type="text" id="address" placeholder="Introduce una dirección">
+      <button onclick="calculateRoute()">Calcular Ruta</button>
+    </div>
+
+    <div id="datos">
+      <h2>DATOS DE CONTACTO</h2>
+      <h4>Email:</h4>
+      <span><i class="fa fa-envelope" aria-hidden="true"></i> brewinfine@email.com</span>
+      
+      <h4>Teléfono:</h4>
+      <span><i class="fa fa-phone" aria-hidden="true"></i> (+34) 627 062 001</span>
+
+      <h4>Dirección:</h4>
+      <span><i class="fa fa-map-marker" aria-hidden="true"></i> Calle de Colón, 4. Valencia, España</span>
+    </div>
+
+  </main>
+
+  <footer id="footer-principal">
+    <img id="footer-logo" src="../assets/design/logo-footer.png" alt="Logo de Brew Infine" width="666" height="374">
+
+    <div id="social-media">
+      <a class="rrss" href="https://instagram.com" target="_blank">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="rrss" href="https://facebook.com" target="_blank">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a class="rrss" href="https://linkedin.com" target="_blank">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div id="footer-info">
+      <div class="footer-info-2">
+        <p class="bold">LEGAL</p>
+        <a class="footer-enlace" href="">Aviso Legal</a>
+        <a class="footer-enlace" href="">Términos de uso</a>
+        <a class="footer-enlace" href="">Política de privacidad</a>
+        <a class="footer-enlace" href="">Cookies</a>
+      </div>
+
+      <div class="footer-info-2">
+        <p class="bold">EXPLORA</p>
+        <a class="footer-enlace" href="./galeria.html">Galería</a>
+        <a class="footer-enlace" href="./presupuesto.html">Presupuesto</a>
+        <a class="footer-enlace" href="./contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-info-2">
+        <p class="bold">VISITANOS</p>
+        <a class="footer-enlace" href="./contacto.html">
+          Calle de Colón, 4. <br>Valencia, España. <br>46004
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      key: "AIzaSyDfrQq2pLMnzMOmoNSuTirfp5HUVkUMKFk",
+      v: "weekly",
+      // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+      // Add other bootstrap parameters as needed, using camel case.
+    });
+  </script>
+  <script async
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfrQq2pLMnzMOmoNSuTirfp5HUVkUMKFk&loading=async&callback=initMap">
+  </script>
+
+</body>
+</html>

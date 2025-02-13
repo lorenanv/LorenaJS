@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 123px;
+}
+
+main{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../assets/images/cupofcouple.jpg);
+    background-size: cover;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    margin-bottom: 6px;
+}
+
+input,select{
+    margin-bottom: 4px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+#formulario-container{
+    background-color: white;
+    border-radius: 20px;
+    padding-inline: 40px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    width: 30em;
+    margin-top: 2.5em;
+}
+
+#checkbox-container{
+   display: flex;
+   flex-direction: column;
+}
+
+#total-container{
+    background-color: #e6e6e6;
+    padding: 15px;
+    align-self: center;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-size: large;
+}
+
+#precio{
+    font-weight: bold;
+}
+
+#discount-container{
+    align-self:center;
+    margin-bottom: 30px;
+}
+
+h4{
+    margin-top: 30px;
+}
+
+#btn-submit{
+    background-color: #ffdb20;
+    border: none;
+    border-radius: 50px;
+    padding: 13px;
+    flex-grow: 2;
+    font-family: questrial;
+}
+
+#btn-submit:hover{
+    cursor: pointer;
+    background-color: #f5c114;
+    transition-duration: 0.4s;
+}
+
+#btn-reset{
+    background-color: rgb(214, 214, 214);
+    border: none;
+    border-radius: 50px;
+    padding: 13px;
+    flex-grow: 1;
+    font-family: questrial;
+}
+
+#btn-reset:hover{
+    background-color: rgb(238, 238, 238);
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+#buttons{
+    display: flex;
+    gap: 10px;
+    width: 30em;
+}
+
+input:checked{
+    border: none;
+    outline: 2px solid #ffdb20;
+}

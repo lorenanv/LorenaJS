@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brew Infine</title>
+  
+  <link rel="icon" href="../assets/icon.png" sizes="256x256">
+
+  <!--Google Fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Questrial&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <!--Favicons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  
+  <!--Uso de una hoja de estilos para estilos generales y otra para estilos específicos de la página actual-->
+  <link rel="stylesheet" type="text/css" href="../css/estilos-generales.css">
+  <link rel="stylesheet" type="text/css" href="../css/presupuesto.css">
+
+  <script src="../js/scripts.js"></script>
+</head>
+
+<body onload="showTotalPrice()">
+  <header>
+    <div id="header-container">
+      <img class="logo" src="../assets/design/logo2.png" alt="'Brew Infine' logotipo con texto" width="666" height="374">
+      <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+      <nav class="nav" id="nav">
+          <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
+          <ul class="nav-list">
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="./galeria.html">GALERIA</a></li>
+            <li><a id="nav-actual" href="./presupuesto.html">PRESUPUESTO</a></li>
+            <li><a href="./contacto.html">CONTACTO</a></li>
+          </ul>
+        <div class="hamburger" id="hamburger"></div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <form method="post" enctype="multipart/form-data" onsubmit="return validar(this)" target="_blank">
+      <div id="formulario-container">
+        <h2>DATOS PERSONALES</h2>
+        <div class="formulario">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="firstName" required>
+
+          <label for="lastName">Apellidos:</label>
+          <input type="text" id="lastName" name="lastName" required>
+
+          <label for="tlf">Teléfono:</label>
+          <input type="tel" id="tlf" name="tlf" required>
+
+          <label for="mail">Correo:</label>
+          <input type="email" id="mail" name="mail" required>
+        </div>
+
+        <h2>PRESUPUESTO</h2>
+        <div class="formulario">
+          <label>Elija un producto: </label>
+          <select id="producto" required onchange="showTotalPrice()">
+            <option label="Ejemplo:"></option>
+            <option value="9.80">Love Powder</option>
+            <option value="17.90">Monsoon Brew: x3 pack</option>
+            <option value="8">Monsoon Brew: sabor vainilla</option>
+            <option value="9.80">Skola</option>
+            <option value="16.50">Blue Magic</option>
+          </select>
+          <label>Indique un plazo de entrega:</label>
+          <input id="plazo" type="number" min="2" max="30" step="1" required onchange="showTotalPrice()">
+          <span class="texto-gris">*Entrega disponible de 2 a 30 días</span>
+        </div>
+
+        <div>
+          <h4>EXTRAS</h4>
+          <div id="checkbox-container">
+            <label>
+              <input class="extraProducto" type="checkbox" onchange="showTotalPrice()">
+              Packaging Especial San Valentín* <span class="texto-gris"> (hasta 14.02.25)</span>
+            </label>
+            <label>
+              <input class="extraProducto" type="checkbox" onchange="showTotalPrice()">
+              Taza Espresso Brew Infine
+            </label>
+            <label>
+              <input class="extraProducto" type="checkbox" onchange="showTotalPrice()">
+              Totebag personalizada Brew Infine
+            </label>
+          </div>
+        </div>
+        
+        <span id="total-container">Total estimado: 
+          <span id="precio">0.0€</span>
+        </span>
+        <span id="discount-container">Descuento aplicado: 
+          <span id="descuentoTotal">0.0€</span>
+        </span>
+
+        <label>
+          <input type="checkbox" required>
+          * He leído y acepto la política de privacidad
+        </label>
+
+        <div id="buttons">
+          <input type="submit" id="btn-submit">
+          <input type="reset" id="btn-reset">
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <footer id="footer-principal">
+    <img id="footer-logo" src="../assets/design/logo-footer.png" alt="Logo de Brew Infine" width="666" height="374">
+
+    <div id="social-media">
+      <a class="rrss" href="https://instagram.com" target="_blank">
+          <i class="fa fa-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="rrss" href="https://facebook.com" target="_blank">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+      </a>
+      <a class="rrss" href="https://linkedin.com" target="_blank">
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+      </a>
+    </div>
+
+    <div id="footer-info">
+      <div class="footer-info-2">
+        <p class="bold">LEGAL</p>
+        <a class="footer-enlace" href="">Aviso Legal</a>
+        <a class="footer-enlace" href="">Términos de uso</a>
+        <a class="footer-enlace" href="">Política de privacidad</a>
+        <a class="footer-enlace" href="">Cookies</a>
+      </div>
+
+      <div class="footer-info-2">
+        <p class="bold">EXPLORA</p>
+        <a class="footer-enlace" href="./galeria.html">Galería</a>
+        <a class="footer-enlace" href="./presupuesto.html">Presupuesto</a>
+        <a class="footer-enlace" href="./contacto.html">Contacto</a>
+      </div>
+
+      <div class="footer-info-2">
+        <p class="bold">VISITANOS</p>
+        <a class="footer-enlace" href="./contacto.html">
+          Calle de Colón, 4. <br>Valencia, España. <br>46004
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

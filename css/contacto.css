@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../assets/images/polinaTankilevitch.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+    padding-top: 123px;
+}
+
+#header-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+
+main{
+    min-height: 100vh;
+}
+
+#map{
+    width: 550px;
+    height: 550px;
+}
+
+input[type="text"]{
+    font-family: questrial;
+    width: 20em;
+    height: 1.5em;
+    margin-top:  1.5em;
+}
+
+button{
+    font-family: questrial;
+    margin-left: 5px;
+}
+
+main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    margin-top: -4.5em;
+}
+
+h4{
+    margin-bottom: 5px;
+}
+
+span>i{
+    color: #ffdb20;
+}
+
+#datos{
+    background-color: white;
+    padding: 3em;
+    padding-top: 1em;
+    border: 2px solid black;
+    border-radius: 50% 20% / 10% 40%;
+}
