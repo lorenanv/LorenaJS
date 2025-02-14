@@ -1,98 +1,7 @@
-/*@media(max-width: 600px){
-   
+@font-face {
+    font-family: "High Cruiser";
+    src: url('../assets/HighCruiser.otf');
 }
-
-@media(min-width: 600px){
-   
-}
-
-@media(min-width: 1024px){
-   
-}*/
-
-/*header{
-    position: fixed;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    top: 0;
-}
-
-.logo{
-    max-width: 15rem;
-    height: auto;
-    margin-left: 1rem;
-}
-
-.nav{
-    margin-right: 4rem;
-}
-.nav-list{
-    list-style-type: none;
-    display: flex;
-    gap: 2rem;
-}
-
-.nav-list li a{
-    text-decoration: none;
-    color: black;
-}
-
-li>a:hover{
-    text-decoration: underline;
-}
-
-#nav-actual {
-    background-color: #ffdb20;
-    padding-inline: 30px;
-    border-radius: 30px;
-}
-
-.abrir-menu, 
-.cerrar-menu{
-    display: none;
-}
-
-@media screen and (max-width: 550px) {
-   .abrir-menu,
-   .cerrar-menu {
-        display: block;
-        border: 0;
-        font-size: 1.25rem;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    .nav{
-        opacity: 0;
-        visibility: hidden;
-        height: 100vh;
-    
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 1rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: beige;
-        padding: 2rem;
-        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-        opacity: 1;
-    }
-
-    .nav-visible{
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav-list{
-        flex-direction: column;
-        align-items: end;
-    }
-}*/
 
 body{
     margin: 0;
@@ -107,23 +16,23 @@ header {
     justify-content: space-between;
 }
 
-.logo {
+#logo {
     max-width: 200px;
     height: auto;
 }
 
-.nav-list {
+#nav-list {
     list-style-type: none;
     display: flex;
     gap: 2.5rem;
 }
 
-.nav-list li a {
+#nav-list li a {
     text-decoration: none;
     color: #1c1c1c;
 }
 
-.nav-list li a:hover {
+#nav-list li a:hover {
     text-decoration: underline;
 }
 
@@ -136,78 +45,6 @@ header {
     background-color: #ffdb20;
     padding-inline: 30px;
     border-radius: 40px;
-}
-
-@media screen and (max-width: 600px) {
-    .abrir-menu,
-    .cerrar-menu {
-        display: block;
-        border: 0;
-        font-size: 1.25rem;
-        background-color: transparent;
-        cursor: pointer;
-    }
-
-    .abrir-menu {
-        color: #1c1c1c;
-    }
-
-    .cerrar-menu {
-        color: #ececec;
-    }
-
-    .nav {
-        opacity: 0;
-        visibility: hidden;
-        display: flex;
-        flex-direction: column;
-        align-items: end;
-        gap: 1rem;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #1c1c1c;
-        padding: 2rem;
-        box-shadow: 0 0 0 100% rgba(0, 0, 0, .5);
-        height: 100vh;
-    }
-
-    .nav.visible {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .nav-list {
-        flex-direction: column;
-        align-items: end;
-    }
-
-    .nav-list li a {
-        color: #ecececec;
-    }
-
-    .nav-list li a:hover{
-        text-decoration: underline;
-    }
-
-    #nav-actual{
-        padding: 0;
-        background-color: transparent;
-        color: white;
-        text-decoration: underline white;
-    }
-
-    .logo{
-        max-width: 320px;
-        margin-left: 10px;
-    }
-
-}
-
-@font-face {
-    font-family: "High Cruiser";
-    src: url('../assets/HighCruiser.otf');
 }
 
 .titulos{
@@ -322,4 +159,80 @@ section{
 
 .texto-gris{
     color: gray;
+}
+
+@media(max-width: 1024px){
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #1c1c1c;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    #nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100% rgba(0, 0, 0, .5);
+        height: 100vh;
+    }
+
+    #nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    #nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    #nav-list li a {
+        color: #ecececec;
+    }
+
+    #nav-list li a:hover{
+        text-decoration: underline;
+    }
+
+    #nav-actual{
+        padding: 0;
+        background-color: transparent;
+        color: white;
+        text-decoration: underline white;
+    }
+
+    #logo{
+        max-width: 320px;
+        margin-left: 10px;
+    }
+}
+
+@media(min-width: 1025px) {
+    #logo {
+        margin-left: 15px;
+    }
+
+    #nav {
+        margin-right: 40px;
+    }
 }

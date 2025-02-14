@@ -38,7 +38,7 @@ main{
 .bg-yellow{
     background-color: #ffdb20;
     width: 100%;
-    margin-top: -2.8px;
+    margin-top: -3.2px;
     min-height: 950px;
 }
 
@@ -92,10 +92,10 @@ main{
 .container-news{
     background-color: white;
     width: 470px;
-    height: 770px;
-    padding: 30px;
     display: grid;
-    align-content: center;
+    align-content: end;
+    padding-inline: 20px;
+    padding-top: 20px;
 }
 
 .news-img{
@@ -153,46 +153,9 @@ h4{
     font-size: medium;
     font-weight: bold;
     margin: 0;
-    margin-top: 3.5em;
     margin-bottom: 1em;
 }
 
-/*@media screen and (max-width: 1023px) {
-    .abrir-menu,
-    .cerrar-menu {
-         display: block;
-         border: 0;
-         font-size: 1.25rem;
-         background-color: transparent;
-         cursor: pointer;
-     }
- 
-     .nav{
-         opacity: 0;
-         visibility: hidden;
-         height: 100vh;
-     
-         display: flex;
-         flex-direction: column;
-         align-items: end;
-         gap: 1rem;
-         position: absolute;
-         top: 0;
-         right: 0;
-         bottom: 0;
-         background-color: beige;
-         padding: 2rem;
-         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-         opacity: 1;
-     }
- 
-     .nav-visible{
-         opacity: 1;
-         visibility: visible;
-     }
- 
-     .nav-list{
-         flex-direction: column;
-         align-items: end;
-     }
-}*/
+@media (max-width: 600px) {
+    
+}
