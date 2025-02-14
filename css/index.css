@@ -157,5 +157,107 @@ h4{
 }
 
 @media (max-width: 600px) {
-    
+    h1{
+        font-size: 16px;
+        margin-bottom: -3px;
+    }
+
+    .title-container>h3{
+        font-size: 10px;
+    }
+
+    header {
+        top: 0;
+    }
+
+    main{
+        margin-top: 270px;
+    }    
+
+    #header-index{
+        justify-content: space-around;
+    }
+
+    #container-portada{
+    padding-top: 20px;
+    padding-bottom: 80px;
+    }
+
+    #portada-gif{
+        width: 100%;
+    }
+
+    .title-container{
+        padding-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+
+    }
+
+    .title-container>h3{
+        width: 60%;
+    }
+
+    .bg-yellow, .bg-white{
+        min-height: auto;
+    }
+
+    #section-a{
+        display: block;
+        padding-bottom: 20px;
+    }
+
+    #section-a-img{
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    #section-a-text{
+        line-height: normal;
+    }
+
+    .section-text{
+        font-size: 14px;
+    }
+
+    #half-coffee{
+        height: 680px;
+    }
+
+    #container-info{
+        grid-template-columns: none;
+        gap: 40px;
+        margin: 0 10px 0 10px;
+        margin-bottom: 40px;
+    }
+
+    .container-news{
+        width: 100%;
+        padding-inline: 0;
+    }
+
+    #image-container{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    #image{
+        width: 100%;
+        border-radius: 0;
+    }
+
+    #button-click{
+        margin-top: -175px;
+        margin-left: 240px;
+        padding: 12px;
+        position: relative;
+    }
+
+    #bold-text{
+        font-size: 10px;
+    }
 }
