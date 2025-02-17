@@ -15,6 +15,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    top: 0;
+}
+
+#header-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
 }
 
 #logo {
@@ -162,11 +171,7 @@ section{
     color: gray;
 }
 
-@media(max-width: 1024px){
-    header{
-        justify-content: flex-start;
-    }
-
+@media(max-width: 600px) {
     .abrir-menu,
     .cerrar-menu {
         display: block;
@@ -232,8 +237,10 @@ section{
     }
 
     #footer-principal{
+        width: 100%;
         display: flex;
         flex-flow: column-reverse nowrap;
+        padding-top: 20px;
     }
 
     #social-media{
@@ -249,6 +256,102 @@ section{
     #footer-info{
         width: 90%;
         margin: 0;
+        column-gap: 5px;
+    }
+
+    .footer-info-2{
+        line-height: 22px;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 1024px) {
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #1c1c1c;
+    }
+
+    .cerrar-menu {
+        color: #ececec;
+    }
+
+    #nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+        height: 100vh;
+    }
+
+    #nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    #nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    #nav-list li a {
+        color: #ecececec;
+    }
+
+    #nav-list li a:hover{
+        text-decoration: underline;
+    }
+
+    #nav-actual{
+        padding: 0;
+        background-color: transparent;
+        color: white;
+        text-decoration: underline white;
+    }
+
+    #logo{
+        max-width: 400px;
+    }
+
+    #footer-principal{
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        justify-content: center;
+        align-items: baseline;
+        height: auto;
+    }
+
+    #social-media{
+        margin-top: 60px;
+        font-size: 50px;
+    }
+
+    #footer-logo{
+        margin: 0;
+        margin-left: 30px;
+        width: 400px;
+    }
+
+    #footer-info{
+        width: 100%;
+        margin: 0;
+        margin-top: 20px;
+        column-gap: 10px;
     }
 
     .footer-info-2{
