@@ -212,6 +212,11 @@ h4{
 
     .section-text:hover{
         text-decoration: underline;
+        color: black;
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
+        transition-duration: 0;
     }
     
     #half-coffee{
