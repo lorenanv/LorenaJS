@@ -16,6 +16,7 @@ header {
     align-items: center;
     justify-content: space-between;
     top: 0;
+    z-index: 2;
 }
 
 #header-container{
@@ -29,6 +30,11 @@ header {
 #logo {
     max-width: 200px;
     height: auto;
+    margin-left: 20px;
+}
+
+nav{
+    margin-right: 40px;
 }
 
 #nav-list {
@@ -107,6 +113,7 @@ section{
     grid-template-columns: repeat(3, 1fr);
     width: 40%;
     margin-right: 50px;
+    
 }
 
 .footer-info-2{
@@ -233,7 +240,10 @@ section{
 
     #logo{
         max-width: 250px;
-        margin-right: 70px;
+    }
+
+    section{
+        min-height: 8vh;
     }
 
     #footer-principal{
@@ -328,11 +338,15 @@ section{
         max-width: 400px;
     }
 
+    section{
+        min-height: 8vh;
+    }
+
     #footer-principal{
         display: flex;
         flex-flow: column-reverse nowrap;
         justify-content: center;
-        align-items: baseline;
+        align-items: center;
         height: auto;
     }
 
@@ -351,20 +365,10 @@ section{
         width: 100%;
         margin: 0;
         margin-top: 20px;
-        column-gap: 10px;
     }
 
     .footer-info-2{
         line-height: 22px;
-    }
-}
-
-@media(min-width: 1025px) {
-    #logo {
-        margin-left: 15px;
-    }
-
-    #nav {
-        margin-right: 40px;
+        align-items: center;
     }
 }

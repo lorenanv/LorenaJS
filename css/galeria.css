@@ -22,7 +22,7 @@ body{
     margin-top: 2em;
 }
 
-i{
+#social-media i{
     color: #ffdb20;
 }
 
@@ -36,4 +36,71 @@ ul{
 #enlace-aqui:hover{
     text-decoration: none;
     color: white;
+}
+
+@media(max-width: 600px) {
+    nav{
+        margin: 0
+    }
+
+    .title-container{
+        margin-top: 0;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 20px;
+    }
+
+    #video-container{
+        width: 100%;
+    }
+    .video-item{
+        width: 100%;
+    }
+
+    #footer-galeria{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        padding-top: 20px;
+        padding-inline: 10px;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 1024px) {
+    nav{
+        margin: 0
+    }
+
+    h1{
+        font-size: 30px;
+    }
+    h4{
+        font-size: 22px;
+    }
+
+    .title-container{
+        margin-top: 100px;
+    }
+
+    .video-item{
+        width: 100%;
+    }
+
+    #footer-galeria{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-flow: column-reverse nowrap;
+        padding-top: 20px;
+        padding-inline: 10px;
+    }
+
+    .footer-info-2{
+        align-items: center;
+    }
 }
