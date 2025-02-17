@@ -67,6 +67,37 @@ span>i{
         margin: 0;
     }
     
+    main{
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #map{
+        width: 100%;
+    }
+
+    h4{
+        margin-left: 10px;
+    }
+
+    input[type="text"] {
+        width: 60%;
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    button{
+        margin: 10px 0 20px 10px;
+    }
+
+    #datos{
+        margin: 40px 0 30px 0;
+    }
+
+    footer{
+        margin-top: 20px;
+    }
 }
 
 @media(min-width: 600px) and (max-width: 1024px) {
@@ -74,4 +105,29 @@ span>i{
         margin: 0;
     }
     
+    main{
+        margin: 0;
+        margin-top: 100px;
+        margin-inline: 5px;
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 50px;
+    }
+
+    #map{
+        width: 100%;
+    }
+
+    #datos{
+        margin: 50px 0 50px 0;
+    }
+
+    input[type="text"] {
+        width: 60%;
+        margin: 0;
+    }
+
+    footer{
+        margin-top: 30px;
+    }
 }
