@@ -12,7 +12,7 @@ window.onscroll = function () {
 }
 
 function getNews() {
-    fetch('../data/myData.json')
+    fetch('https://lorenanv.github.io/LorenaJS/data/myData.json')
         .then(response => response.json())
         .then(data => {
             container1.innerHTML = `
