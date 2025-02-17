@@ -5,7 +5,7 @@
             "fecha": "2025-02-07",
             "fuente": "Levante-EMV",
             "contenido": "Valencia ha dado la bienvenida a Brew Infine, una nueva marca de café de especialidad que promete transformar la experiencia cafetera de los valencianos. Con un enfoque en la calidad, la sostenibilidad y el respeto por las tradiciones del café, Brew Infine busca posicionarse como una referencia en la escena local.",
-            "imagen": "../assets/images/news-1.jpg",
+            "imagen": "/assets/images/news-1.jpg",
             "enlace": "https://www.levante-emv.com/"
         },
         {
@@ -13,7 +13,7 @@
             "fecha": "2025-01-15",
             "fuente": "EL PAIS",
             "contenido": "Cada vez más oficinas están invirtiendo en equipos de alta gama para la preparación de café de especialidad. Este cambio refleja una tendencia más amplia hacia la mejora del bienestar en el entorno laboral, en la que el café juega un papel esencial como generador de energía y creatividad.",
-            "imagen": "../assets/images/news-3.jpg",
+            "imagen": "/assets/images/news-3.jpg",
             "enlace": "https://elpais.com/"
         },
         {
@@ -21,7 +21,7 @@
             "fecha": "2024-31-02",
             "fuente": "La Vanguardia",
             "contenido": "El café de especialidad ha ganado terreno en los últimos años, destacándose como una de las tendencias más fuertes dentro del sector cafetero. Este tipo de café, reconocido por su origen, calidad y procesos de cultivo meticulosos, ha llegado a ser una opción predilecta entre los consumidores exigentes.",
-            "imagen": "../assets/images/news-2.jpg",
+            "imagen": "/assets/images/news-2.jpg",
             "enlace": "https://www.lavanguardia.com/"
         }
     ]
