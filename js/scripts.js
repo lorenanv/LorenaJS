@@ -2,10 +2,12 @@ window.onscroll = function () {
     const portadaGif = document.getElementById('portada-gif');
     let headerIndex = document.getElementById("header-index");
 
-    if(window.scrollY > (portadaGif.clientHeight - headerIndex.clientHeight)) {
-        headerIndex.style.backgroundColor = "white";
-    } else {
-        headerIndex.style.backgroundColor = "transparent";
+    if(portadaGif) {
+        if(window.scrollY > (portadaGif.clientHeight - headerIndex.clientHeight)) {
+            headerIndex.style.backgroundColor = "white";
+        } else {
+            headerIndex.style.backgroundColor = "transparent";
+        }
     }
 }
 
