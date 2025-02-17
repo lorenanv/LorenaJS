@@ -11,6 +11,29 @@ window.onscroll = function () {
     }
 }
 
+function initHeaderMenu() {
+    const nav = document.querySelector("#nav");
+    const abrir = document.querySelector("#abrir");
+    const cerrar = document.querySelector("#cerrar");
+    
+    abrir.addEventListener("click", () => {
+        nav.classList.add("visible");
+    });
+    
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    });
+}
+
+function colorBox(event) {
+
+    event.currentTarget.style.boxShadow = "10px 20px 30px #ffdb20";
+}
+
+function uncolorBox(event) {
+    event.currentTarget.style.boxShadow = "0 0 0 transparent"
+}
+
 function getNews() {
     fetch('https://lorenanv.github.io/LorenaJS/data/myData.json')
         .then(response => response.json())
@@ -134,18 +157,4 @@ function validar(form) {
     
         return false;
     }
-}
-
-function initHeaderMenu() {
-    const nav = document.querySelector("#nav");
-    const abrir = document.querySelector("#abrir");
-    const cerrar = document.querySelector("#cerrar");
-    
-    abrir.addEventListener("click", () => {
-        nav.classList.add("visible");
-    });
-    
-    cerrar.addEventListener("click", () => {
-        nav.classList.remove("visible");
-    });
 }

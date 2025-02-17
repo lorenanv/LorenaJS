@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   
-  <!--Uso de una hoja de estilos para estilos generales y otra para estilos específicos de la página actual-->
+  <!--Hoja de estilos generales y hoja de estilos específicos de la página actual-->
   <link rel="stylesheet" type="text/css" href="../css/estilos-generales.css">
   <link rel="stylesheet" type="text/css" href="../css/contacto.css">
 
@@ -24,13 +24,18 @@
   <script src="../js/maps.js"></script>
 </head>
 
+<!--Llamada a la función para el menú hamburguesa en dispositivos móviles y tablets-->
 <body onload="initHeaderMenu()">
   <header>
     <div id="header-container">
+
       <a href="../index.html">
         <img id="logo" src="../assets/design/logo2.png" alt="'Brew Infine' logotipo con texto" width="666" height="374">
       </a>
-        <button id="abrir" class="abrir-menu"><i class="bi bi-list"></i></button>
+      <button id="abrir" class="abrir-menu">
+        <i class="bi bi-list"></i>
+      </button>
+      
       <nav id="nav">
           <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
           <ul id="nav-list">
@@ -40,6 +45,7 @@
             <li><a id="nav-actual" href="./contacto.html">CONTACTO</a></li>
           </ul>
       </nav>
+
     </div>
   </header>
 

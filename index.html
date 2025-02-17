@@ -16,20 +16,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!--Uso de una hoja de estilos para estilos generales y otra para estilos específicos de la página actual-->
+  <!--Hoja de estilos generales y hoja de estilos específicos de la página actual-->
   <link rel="stylesheet" href="./css/estilos-generales.css">
   <link rel="stylesheet" href="./css/index.css">
 
   <script src="./js/scripts.js"></script>
 </head>
 
+<!--Llamada a la función para el menú hamburguesa en dispositivos móviles y tablets-->
 <body onload="initHeaderMenu()">
   <header>
     <div id="header-index">
+
       <a href="./index.html">
         <img id="logo" src="./assets/design/logo2.png" alt="'Brew Infine' logotipo con texto" width="666" height="374">
       </a>
-        <button id="abrir" class="abrir-menu" ><i class="bi bi-list"></i></button>
+
+      <button id="abrir" class="abrir-menu" >
+        <i class="bi bi-list"></i>
+      </button>
+
       <nav id="nav">
           <button id="cerrar" class="cerrar-menu"><i class="bi bi-x"></i></button>
           <ul id="nav-list">
@@ -39,6 +45,7 @@
             <li><a href="./views/contacto.html">CONTACTO</a></li>
           </ul>
       </nav>
+
     </div>
   </header>
 
@@ -75,6 +82,7 @@
     </section>
 
     <section class="bg-white">
+
       <div class="title-container">
         <h1>COMPROMISO Y CALIDAD</h1>
         <h3>100% ARÁBICA |
@@ -82,23 +90,28 @@
           DESDE COLOMBIA, BRASIL Y KENYA
         </h3>
       </div>
-      <img id="half-coffee" src="./assets/images/halfCoffee.jpg" alt="Fotografía de granos de café en un bol" width="4032" height="2038">
-      
+
+      <img id="half-coffee" src="./assets/images/halfCoffee.jpg" alt="Fotografía de granos de café en un bol" width="4032" height="2038">  
+
     </section>
 
     <section class="bg-yellow">
+
       <div class="title-container">
         <h1>NOTICIAS INFINE</h1>
         <h3>EXPLORA ARTÍCULOS SOBRE CAFÉ Y NUESTRA MARCA</h3>
       </div>
+
       <div id="container-info">
         <div class="container-news" id="container1"></div>
         <div class="container-news" id="container2"></div>
         <div class="container-news" id="container3"></div>
       </div>
+
     </section>
 
     <section class="bg-white">
+
       <div class="title-container">
         <h1>¡NO OLVIDES HACER TU PEDIDO!</h1>
         <h3>PIDE PRESUPUESTO EN EL SIGUIENTE ENLACE:</h3>
@@ -110,6 +123,7 @@
           <span id="bold-text">CLICK!</span>
         </a>
       </div>
+      
     </section>
   
   </main>
@@ -155,6 +169,7 @@
     </div>
   </footer>
 
+  <!--Llamada a la función para cargar el archivo JSON en la sección de noticias-->
   <script>getNews();</script>
   
 </body>
