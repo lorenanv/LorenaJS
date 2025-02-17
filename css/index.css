@@ -210,6 +210,10 @@ h4{
         font-size: 14px;
     }
 
+    .section-text:hover{
+        text-decoration: underline;
+    }
+    
     #half-coffee{
         height: 680px;
     }
@@ -311,6 +315,10 @@ h4{
 
     .section-text{
         font-size: 20px;
+    }
+
+    .section-text:hover{
+        text-decoration: underline;
     }
 
     #half-coffee{
