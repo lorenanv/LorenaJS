@@ -8,7 +8,7 @@ body{
 
 main{
     width: 100%;
-    min-height: 100vh;
+    height: auto;
     background-image: url(../assets/images/cupofcouple.jpg);
     background-size: cover;
 }
@@ -32,15 +32,16 @@ input,select{
 }
 
 #formulario-container{
-    background-color: white;
-    border-radius: 20px;
-    padding-inline: 40px;
-    padding-bottom: 20px;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     width: 30em;
     margin-top: 2.5em;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding-inline: 40px;
+    padding-bottom: 20px;
+    background-color: white;
 }
 
 #checkbox-container{
@@ -101,12 +102,51 @@ h4{
 }
 
 #buttons{
-    display: flex;
-    gap: 10px;
-    width: 30em;
+    width: 100%;
+    display: grid;
+    margin-top: 15px;
+    gap: 5px;
 }
 
 input:checked{
     border: none;
     outline: 2px solid #ffdb20;
+}
+
+@media(max-width: 600px) {
+    nav{
+        margin: 0;
+    }
+
+    main{
+        min-height: 0;
+    }
+
+    #formulario-container{
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 0;
+        padding-bottom: 20px;
+        padding-inline: 20px;
+        margin: 50px 20px 50px 20px;
+    }
+}
+
+@media(min-width: 600px) and (max-width: 1024px) {
+    nav{
+        margin: 0;;
+    }
+
+    main{
+        min-height: 0;
+    }
+
+    #formulario-container{
+        width: 500px;
+        margin-bottom: 50px;
+        padding: 0;
+        padding-bottom: 20px;
+        padding-inline: 20px;
+        margin: 150px 70px 70px 70px;
+    }
 }

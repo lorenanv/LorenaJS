@@ -16,7 +16,6 @@ body{
     background-color: white;
 }
 
-
 main{
     min-height: 100vh;
 }
@@ -61,4 +60,18 @@ span>i{
     padding-top: 1em;
     border: 2px solid black;
     border-radius: 50% 20% / 10% 40%;
+}
+
+@media(max-width: 600px) {
+    nav{
+        margin: 0;
+    }
+    
+}
+
+@media(min-width: 600px) and (max-width: 1024px) {
+    nav{
+        margin: 0;
+    }
+    
 }
