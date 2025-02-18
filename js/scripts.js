@@ -1,3 +1,4 @@
+// Función que añade fondo blanco al header al finalizar el scroll de la portada.
 window.onscroll = function () {
     const portadaGif = document.getElementById('portada-gif');
     let headerIndex = document.getElementById("header-index");
@@ -11,6 +12,7 @@ window.onscroll = function () {
     }
 }
 
+// Función que hace visible/invisible los botones abrir/cerrar del menú hamburguesa.
 function initHeaderMenu() {
     const nav = document.querySelector("#nav");
     const abrir = document.querySelector("#abrir");
@@ -25,15 +27,18 @@ function initHeaderMenu() {
     });
 }
 
+// Función que crea un efecto de sombra sobre contenedores.
 function colorBox(event) {
 
     event.currentTarget.style.boxShadow = "10px 20px 30px #ffdb20";
 }
 
+// Función que vuelve transparente la sombra de color de la función colorBox().
 function uncolorBox(event) {
     event.currentTarget.style.boxShadow = "0 0 0 transparent"
 }
 
+// Función que carga el archivo JSON.
 function getNews() {
     $.ajax({
         url: 'https://lorenanv.github.io/LorenaJS/data/myData.json',
@@ -57,6 +62,7 @@ function getNews() {
     });
 }
 
+// Función que calcula el precio total.
 function getTotalPrice() {
     const producto = document.getElementById("producto");
     const plazo = document.getElementById("plazo");
@@ -84,6 +90,7 @@ function getTotalPrice() {
     return precioTotal;
 }
 
+// Función que calcula el descuento según el plazo indicado.
 function getTotalDiscount() {
     const plazo = document.getElementById("plazo");
     let descuentoPlazo;
@@ -99,6 +106,7 @@ function getTotalDiscount() {
     return descuentoPlazo;
 }
 
+// Función que muestra el precio total y el descuento aplicado al usuario.
 function showTotalPrice() {
     const precioTotal = getTotalPrice();
     const descuentoTotal = getTotalDiscount();
@@ -109,6 +117,7 @@ function showTotalPrice() {
     descuento.innerHTML = descuentoTotal.toFixed(2) + "€";
 }
 
+// Función que los datos del formulario introducidos por el usuario.
 function validar(form) {
     let valido = true;
     let mensaje = 'No se ha podido enviar el formulario.';
