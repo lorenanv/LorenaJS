@@ -35,31 +35,26 @@ function uncolorBox(event) {
 }
 
 function getNews() {
-    fetch('https://lorenanv.github.io/LorenaJS/data/myData.json')
-        .then(response => response.json())
-        .then(data => {
-            container1.innerHTML = `
-            <h4>${data.noticias[0].titulo}</h4>
-            <p>${data.noticias[0].fecha + ' | ' + data.noticias[0].fuente}</p>
-            <p>${data.noticias[0].contenido}</p>
-            <a class='news-enlace' href='${data.noticias[0].enlace}'>Ver más [...]</a>
-            <img class='news-img' src='${data.noticias[0].imagen}' alt='Post publicitario Brew Infine' width='1080' height='1080'>
-            `
-            container2.innerHTML = `
-            <h4>${data.noticias[1].titulo}</h4>
-            <p>${data.noticias[1].fecha + ' | ' + data.noticias[1].fuente}</p>
-            <p>${data.noticias[1].contenido}</p>
-            <a class='news-enlace' href='${data.noticias[1].enlace}'>Ver más [...]</a>
-            <img class='news-img' src='${data.noticias[1].imagen}' alt='Granos de café sobre una cuchara' width='1080' height='1080'>
-            `
-            container3.innerHTML = `
-            <h4>${data.noticias[2].titulo}</h4>
-            <p>${data.noticias[2].fecha + ' | ' + data.noticias[2].fuente}</p>
-            <p>${data.noticias[2].contenido}</p>
-            <a class='news-enlace' href='${data.noticias[2].enlace}'>Ver más [...]</a>
-            <img class='news-img' src='${data.noticias[2].imagen}' alt='Taza de café latte' width='1080' height='1080'>
-            `
-        })
+    $.ajax({
+        url: 'https://lorenanv.github.io/LorenaJS/data/myData.json',
+        type: 'GET',
+        success: function (data) {
+            let newsContainers = document.getElementsByClassName('container-news');
+
+            for(let i = 0; i < newsContainers.length; i++) {
+                newsContainers[i].innerHTML = `
+                    <h4>${data.noticias[i].titulo}</h4>
+                    <p>${data.noticias[i].fecha + ' | ' + data.noticias[i].fuente}</p>
+                    <p>${data.noticias[i].contenido}</p>
+                    <a class='news-enlace' href='${data.noticias[i].enlace}'>Ver más [...]</a>
+                    <img class='news-img' src='${data.noticias[i].imagen}' alt='Post publicitario Brew Infine' width='1080' height='1080'>
+                    `;
+            }
+        },
+        error: function (xhr, status) {
+            alert('Disculpe, existió un problema');
+        }
+    });
 }
 
 function getTotalPrice() {
