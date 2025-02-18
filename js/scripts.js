@@ -50,14 +50,14 @@ function getNews() {
             <p>${data.noticias[1].fecha + ' | ' + data.noticias[1].fuente}</p>
             <p>${data.noticias[1].contenido}</p>
             <a class='news-enlace' href='${data.noticias[1].enlace}'>Ver más [...]</a>
-            <img class='news-img' src='${data.noticias[1].imagen}' alt='Post publicitario Brew Infine' width='1080' height='1080'>
+            <img class='news-img' src='${data.noticias[1].imagen}' alt='Granos de café sobre una cuchara' width='1080' height='1080'>
             `
             container3.innerHTML = `
             <h4>${data.noticias[2].titulo}</h4>
             <p>${data.noticias[2].fecha + ' | ' + data.noticias[2].fuente}</p>
             <p>${data.noticias[2].contenido}</p>
             <a class='news-enlace' href='${data.noticias[2].enlace}'>Ver más [...]</a>
-            <img class='news-img' src='${data.noticias[2].imagen}' alt='Post publicitario Brew Infine' width='1080' height='1080'>
+            <img class='news-img' src='${data.noticias[2].imagen}' alt='Taza de café latte' width='1080' height='1080'>
             `
         })
 }
