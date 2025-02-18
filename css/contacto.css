@@ -107,8 +107,7 @@ span>i{
     
     main{
         margin: 0;
-        margin-top: 100px;
-        margin-inline: 5px;
+        margin-inline: 20px;
         display: flex;
         flex-flow: row nowrap;
         gap: 50px;
